@@ -19,6 +19,14 @@ const routers = [{
     name: 'list',
     component: List
 }, {
+    path: '/message',
+    name: 'message',
+    component: List
+}, {
+    path: '/about',
+    name: 'about',
+    component: List
+}, {
     path: '*',
     component: Home
 }];

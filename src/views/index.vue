@@ -1,6 +1,5 @@
 <template>
     <div class="index">
-        Hello World
         <img class="index" src="../assets/images/index.png">
     </div>
 </template>
@@ -18,6 +17,8 @@ export default {
 };
 </script>
 <style lang="scss">
+@import '../assets/scss/common/reset.scss';
+// @import '../assets/scss/common/common.scss';
 .index {
     width: 100%;
     background-color: #000;

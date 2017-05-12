@@ -13,14 +13,15 @@
                 </router-link>
             </div>
         </header>
-        <!--<nv-menu :show-menu="show" :page-type="pageType" :nick-name="nickname" :profile-url="profileurl" v-if="fixHead">
+        <nv-menu :show-menu="show" :page-type="pageType" :nick-name="nickname" :profile-url="profileurl" v-if="fixHead">
 
-                    </nv-menu>-->
+        </nv-menu>
     </div>
 </template>
 
 <script>
 import $ from 'webpack-zepto';
+import nvMenu from '../components/menu';
 export default {
     replace: true,
     props: {
@@ -41,17 +42,17 @@ export default {
     },
     methods: {
         openMenu() {
-            $('html,body,#page').adddClass('scroll-hide');
+            $('html,body,#page').addClass('scroll-hide');
             this.show = !this.show;
         },
         showMenus() {
             this.show = !this.show;
             $('html,body,#page').removeClass('scroll-hide');
         }
+    },
+    components: {
+        nvMenu
     }
-    // components: {
-    //     'nvMenu': require('./memu.vue')
-    // }
 };
 </script>
 
